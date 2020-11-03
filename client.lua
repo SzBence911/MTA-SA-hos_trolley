@@ -6,13 +6,14 @@ A scriptben feltételezem, hogy később lehet használni a már kész scripteke
 --]]
 
 spawnHos = false
+spawnedHos = false
 
 local opened = {0,0}
 
 function outputPressedCharacter(character)
-    if character == "e" and spawnHos == true then
-        outputChatBox("Trigered")
+    if character == "e" and spawnHos == true and spawnedHos == false then
         triggerServerEvent("spawnHos", resourceRoot)
+        spawnedHos = true
     end
     if character == "q" then
         triggerServerEvent ( "detachHos", resourceRoot)
@@ -32,13 +33,10 @@ end
 
 addCommandHandler ( "open", function ()
     if vehicle then
-        outputChatBox("Openup")
         for i=4,5 do
             opened[i - 3] = 1
-            outputChatBox(opened[i - 3])
             setVehicleDoorOpenRatio( vehicle, i, 1, 20 )
         end
-        outputChatBox(outputChatBox[1] .. outputChatBox[2])
 	end
 end )
 
@@ -55,10 +53,7 @@ function updateCamera ()
     end
 end
 
-
-
-
- addEventHandler ( "onClientRender", root, updateCamera )
+addEventHandler ( "onClientRender", root, updateCamera )
 addCommandHandler ( "amb", spawnAmb )
 addEventHandler("onClientMarkerHit", getRootElement(), attachOnHit)
 addEventHandler("onClientClick", getRootElement(), addLabelOnClick )
