@@ -5,8 +5,8 @@ A scriptben feltételezem, hogy később lehet használni a már kész scripteke
     
 --]]
 
-spawnHos = false
-spawnedHos = false
+local spawnHos = false
+local spawnedHos = false
 
 local opened = {0,0}
 
