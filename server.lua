@@ -29,9 +29,7 @@ end
 
 addEvent( "detachHos", true )
 addEventHandler( "detachHos", resourceRoot, detachHos) 
-
 addEvent( "onHosTriggered", true )
 addEventHandler( "onHosTriggered", resourceRoot, onHosTriggered) 
-
 addEvent( "spawnHos", true )
 addEventHandler( "spawnHos", resourceRoot, spawnHos ) 
