@@ -1,0 +1,12 @@
+Ebben a fájlban található a már kész scriptekből pótoladó dolgok bekerülés előtt
+
+server.lua
+    Hordágyak illetve a hozzá tartozó markerek listában tárolása, ID-hez kötve
+    Hordágy rotation-hoz kötött spawnolása 
+    Marker hordágyhoz kötött spawnolása
+    A már működő ID rendszer a player szállításához illetve az ehhet tartozó attach függvény megírása
+
+client.lua
+    Jármű kezelőfelülettel összekötés(pl új button a kiszedéséhez, jelenleg e betű a spawnolás a tesztelés miatt illetve q a detach)
+    /berak [id] parancs összekötés eme scripttel
+    A szállított személy a /berak utáni animáció meghívása
